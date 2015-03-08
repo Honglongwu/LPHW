@@ -1,7 +1,7 @@
 '''
 #=============================================================================
-#     FileName: ex28.py 
-#         Desc: logistic practice 
+#     FileName: ex29.py 
+#         Desc: if condition excercise
 #       Author: Honglong Wu
 #        Email: wuhonglong@genomics.cn
 #      Version: 0.0.1
