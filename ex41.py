@@ -43,7 +43,7 @@ def central_corridor():
 		print "completely ruins his brand new costume his mother bought him, which"
 		print "makes him fly into an insane rage and blast you repeatly in the face until"
 		print "you are dead. Then he eats you."
-		print 'death'
+		return 'death'
 
 	elif action == "dodge!":
 		print "Like a world class boxer you dodge, weave, slip and slide right"
@@ -52,7 +52,7 @@ def central_corridor():
 		print "bang your head on the metal wall and pass out."
 		print "You wake up shortly after only to die as the gothon stomps on"
 		print "your head and eats you."
-		print 'death'
+		return 'death'
 	
 	elif action == "tell a joke":
 		print "Lucky for you they made learn gothon insults in the academy."
@@ -61,10 +61,10 @@ def central_corridor():
 		print "The gothon stops, tries not to laugh, then busts out laughing and can't move."
 		print "While he's laughing you run up and shoot him square in the head"
 		print "putting him down, then jump through the weapon armory door."
-		print 'laser_weapon_armory'
+		return 'laser_weapon_armory'
 	else:
 		print "DOES NOT COMPUTE!"
-		print 'central_corridor'
+		return 'central_corridor'
 
 def laser_weapon_armory():
 	print "you do a dive roll into the weapon armory, crouch and scan the room"
@@ -72,8 +72,6 @@ def laser_weapon_armory():
 	print "You stand up and run to the far side of the room and find the"
 	print "neutron bomb in its container. There's a keypad lock on the box"
 	print "and you need the code to get the bomb out. if you get the code"
-	print "wrong 10 times then the clock closes forever and you can't"
-	print "get the bomb. the code is 3 digits."
 	
 	code = "%d%d%d" %(randint(1, 9), randint(1, 9), randint(1, 9))
 	guess = raw_input("[keypad]> ")
@@ -95,7 +93,7 @@ def laser_weapon_armory():
 		print "melting around as the mechanism is fused together."
 		print "You decide to sit there, and finally the gothons blow up the"
 		print "ship from their ship and you die."
-		print 'death'
+		return 'death'
 
 def the_bridge():
 	print "You burst Onto the Bridge with neutron destruct bomb"
@@ -114,7 +112,7 @@ def the_bridge():
 		print "As you die you see another gothon frantically try to disarm"
 		print "the bomb. You die knowing they will probably blow up when "
 		print "it goes off"
-		print 'death'
+		return 'death'
 	elif action == "slowly place the bomb":
 		print "You point your balster at the bomb under your arm"
 		print "and the gothons put their hands up and start to sweat."
@@ -124,7 +122,7 @@ def the_bridge():
 		print "and blast the lock so the gothons can't get out."
 		print "Now that the bomb is placed you run to the escape pod to"
 		print "get off this tin can."
-		print 'escape_pod'
+		return 'escape_pod'
 
 	else:
 		print "DOES NOT COMPUTE!"
