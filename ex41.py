@@ -105,3 +105,29 @@ def the_bridge():
 	print "weapons out yet, as they see the active bomb under your"
 	print "arm and don't want to set it off."
 	
+	action = raw_input("> ")
+	
+	if action == "throw the bomb":
+		print "In a panic you throw the bomb at the group of gothons"	
+		print "and make a leap for the door. Right as you drop it a"
+		print "Gothon shoots you right in the back killing you."
+		print "As you die you see another gothon frantically try to disarm"
+		print "the bomb. You die knowing they will probably blow up when "
+		print "it goes off"
+		print 'death'
+	elif action == "slowly place the bomb":
+		print "You point your balster at the bomb under your arm"
+		print "and the gothons put their hands up and start to sweat."
+		print "You inch backward to the door, open it, and then carefully"
+		print "place the bomb on the floor, pointing your blaster at it."
+		print "You then jump back through the door, punch the close button"
+		print "and blast the lock so the gothons can't get out."
+		print "Now that the bomb is placed you run to the escape pod to"
+		print "get off this tin can."
+		print 'escape_pod'
+
+	else:
+		print "DOES NOT COMPUTE!"
+		return "the_bridge"
+
+def escape_pod():
