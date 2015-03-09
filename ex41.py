@@ -165,4 +165,12 @@ ROOMS = {
 	'escape_pod':escape_pod
 }
 
+def runner(map, start):
+	next = start
+	
+	while True:
+		room = map[next]
+		print "\n---------"
+		next = room()
 
+runner(ROOMS, 'central_corridor')
