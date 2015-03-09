@@ -156,3 +156,13 @@ def escape_pod():
 		print "bright star, taking out the gothon ship at the same"
 		print "time. You won!"
 		exit(0)
+
+ROOMS = {
+	'death':death,
+	'central_corridor':central_corridor,
+	'laser_weapon_armory':laser_weapon_armory,
+	'the_bridge':the_bridge,
+	'escape_pod':escape_pod
+}
+
+
