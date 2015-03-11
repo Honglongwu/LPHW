@@ -22,6 +22,20 @@ please follow me if you think this will benifit you.
 # Create test file
 ```` touch tests/NAME_tests.py
 
+# Install Some Packages
+pip – http://pypi.python.org/pypi/pip
+distribute – http://pypi.python.org/pypi/distribute
+nose – http://pypi.python.org/pypi/nose/
+virtualenv – http://pypi.python.org/pypi/virtualenv
+
+# Every Project You Can Do as the following steps
+1. Copy this skeleton and change the name of project to your new file
+2. Change the name of NAME to project or anything you like
+3. Including the information of your new project by editting setup.py file
+4. To match you new module, you should rename tests/NAME_tests.py file
+5. Checking the problem with nosetests
+6. Coding now.
+
 Author: Honglong Wu    
 Email: BGI, wuhonglong@genomics.cn    
 History: Because all the problem was caused by the DNS
