@@ -16,13 +16,13 @@ please follow me if you think this will benifit you.
 
 ### Initial configure file
 
-```` touch NAME/__init__.py    
-```` touch tests/__init__.py    
-```` touch setup.py    
+	touch NAME/__init__.py    
+	touch tests/__init__.py    
+	touch setup.py    
 
 ### Create test file    
 
-```` touch tests/NAME_tests.py
+	touch tests/NAME_tests.py
 
 ### Install Some Packages    
 pip – http://pypi.python.org/pypi/pip    
