@@ -6,29 +6,31 @@ project, debug my program and test the result of my program.
 stick on my goal, one day will come.
 please follow me if you think this will benifit you.    
 
-## Create One Project Skeleton
-```` mkdir -p projects
-```` cd projects/
-```` mkdir skeleton
-```` cd skeleton
-```` mkdir bin NAME tests docs
+### Create One Project Skeleton      
+```` mkdir -p projects    
+```` cd projects/    
+```` mkdir skeleton    
+```` cd skeleton    
+```` mkdir bin NAME tests docs    
 
-# Initial configure file
+### Initial configure file
 
-```` touch NAME/__init__.py
-```` touch tests/__init__.py
-```` touch setup.py
+```` touch NAME/__init__.py    
+```` touch tests/__init__.py    
+```` touch setup.py    
 
-# Create test file
+# Create test file    
+
 ```` touch tests/NAME_tests.py
 
-# Install Some Packages
-pip – http://pypi.python.org/pypi/pip
-distribute – http://pypi.python.org/pypi/distribute
-nose – http://pypi.python.org/pypi/nose/
-virtualenv – http://pypi.python.org/pypi/virtualenv
+# Install Some Packages    
+pip – http://pypi.python.org/pypi/pip    
+distribute – http://pypi.python.org/pypi/distribute    
+nose – http://pypi.python.org/pypi/nose/    
+virtualenv – http://pypi.python.org/pypi/virtualenv    
 
 # Every Project You Can Do as the following steps
+
 1. Copy this skeleton and change the name of project to your new file
 2. Change the name of NAME to project or anything you like
 3. Including the information of your new project by editting setup.py file
