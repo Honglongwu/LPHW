@@ -47,25 +47,31 @@ nouns = {
 	'cabinet': 'nouns'
 }
 
-numbers = {
-	'0':'numbers',
-	'1':'numbers',
-	'2':'numbers',
-	'3':'numbers',
-	'4':'numbers',
-	'5':'numbers',
-	'6':'numbers',
-	'7':'numbers',
-	'8':'numbers',
-	'9':'numbers'
-}
+#number = {
+#	'0':'numbers',
+#	'1':'numbers',
+#	'2':'numbers',
+#	'3':'numbers',
+#	'4':'numbers',
+#	'5':'numbers',
+#	'6':'numbers',
+#	'7':'numbers',
+#	'8':'numbers',
+#	'9':'numbers'
+#}
+
+def convert_number(s):
+	try:
+		return int(s)
+	except ValueError:
+		return None
 
 def scan(sentence):
 	words = sentence.split(' ')
 	results = []
 	for word in words:
-		if numbers.get(word, 1) != 1:
-			results.append((numbers.get(word), word))
+		if convert_number(word):
+			results.append(('numbers', convert_number(word)))
 		elif nouns.get(word, 1) != 1:
 			results.append((nouns.get(word), word))
 		elif stops.get(word, 1) != 1:
