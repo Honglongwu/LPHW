@@ -12,8 +12,7 @@
 
 #-*- coding: utf-8 -*-
 
-directions = 
-{
+directions = {
 	'north':'directions',
 	'south':'directions',
 	'east':'directions',
@@ -25,16 +24,14 @@ directions =
 	'back':'directions'
 }
 
-verbs = 
-{
+verbs = {
 	'go': 'verbs',
 	'stop': 'verbs',
 	'kill': 'verbs',
 	'eat': 'verbs'
 }
 
-stops = 
-{
+stops = {
 	'the':'stops',
 	'in':'stops',
 	'of':'stops',
@@ -43,16 +40,14 @@ stops =
 	'it':'stops'
 }
 
-nouns = 
-{
+nouns = {
 	'door': 'nouns',
 	'bear': 'nouns',
 	'princess': 'nouns',
 	'cabinet': 'nouns'
 }
 
-numbers = 
-{
+numbers = {
 	'0':'numbers',
 	'1':'numbers',
 	'2':'numbers',
@@ -65,8 +60,8 @@ numbers =
 	'9':'numbers'
 }
 
-def scan():
-	words = raw_input().split(' ')
+def scan(sentence):
+	words = sentence.split(' ')
 	results = []
 	for word in words:
 		if numbers.get(word, 1) != 1:
@@ -81,6 +76,11 @@ def scan():
 			results.append((verbs.get(word), word))
 		else:
 			results.append(('error', word))
-	print results
 	return results
-	
+
+def main():
+	sentences = raw_input("Please Input: ")
+	print scan(sentences)
+
+if __name__ == '__main__':
+	main()	
