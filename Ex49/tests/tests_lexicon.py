@@ -13,7 +13,7 @@
 #-*- coding: utf-8 -*-
 
 from nose.tools import *
-from Ex48 import lexicon
+from Ex49 import lexicon
 
 def test_directions():
 	assert_equal(lexicon.scan("north"), [('directions', 'north')])

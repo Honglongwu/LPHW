@@ -71,8 +71,6 @@ def scan(sentence):
 			results.append(('error', word))
 	return results
 
-class
-
 def main():
 	sentences = raw_input("Please Input: ")
 	print scan(sentences)
