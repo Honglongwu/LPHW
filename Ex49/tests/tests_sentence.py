@@ -17,22 +17,22 @@ from Ex49 import lexicon
 from Ex49 import sentence
 
 def test_sentence_peek():
-	setence.peek(lexicon.scan("north south east"))
+	assert_raises(sentence.ParserError, sentence.peek, lexicon.scan("north south east"))
 
 def test_sentence_match():
-	sentence.match(lexicon.scan("honglong go north south east"), 'verbs')
+	assert_raises(sentence.ParserError,sentence.match, lexicon.scan("go north south east"), 'verbs')
 
 def test_sentence_skip():
-	sentence.skip(lexicon.scan("honglong go north south east on the bear"), 'stops')
+	assert_raises(sentence.ParserError,sentence.skip, lexicon.scan("on bear"), 'stops')
 
 def test_sentence_parseverb():
-	sentence.parse_verb(lexicon.scan("honglong go north south east on the bear"))
+	assert_raises(sentence.ParserError,sentence.parse_verb, lexicon.scan("go north south east"))
 
 def test_sentence_parseobject():
-	sentence.parse_object(lexicon.scan("honglong go north south east on the bear"))
+	assert_raises(sentence.ParserError,sentence.parse_object, lexicon.scan("go north south east"))
 
 def test_sentence_parsesubject():
-	sentence.parse_subject(lexicon.scan("honglong go north south east on the bear"),'honglong')
+	assert_raises(sentence.ParserError, sentence.parse_subject, lexicon.scan("north south east on the bear"),'honglong')
 
 def test_sentence():
-	sentence.parse_sentence(lexicon.scan("honglong go north south east on the bear"))
+	assert_raises(sentence.ParserError, sentence.parse_sentence, lexicon.scan("go north south east on the bear"))

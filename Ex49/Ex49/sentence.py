@@ -21,10 +21,10 @@ class ParserError(Exception):
 class Sentence(object):
 	
 	def __init__(self, subject, verb, object):
-	# remember we take ('noun', 'princess') tuples and convert them
-	self.subject = subject[1]
-	self.verb = verb[1]
-	self.object = object[1]
+		# remember we take ('noun', 'princess') tuples and convert them
+		self.subject = subject[1]
+		self.verb = verb[1]
+		self.object = object[1]
 
 def peek(word_list):
 	if word_list:
