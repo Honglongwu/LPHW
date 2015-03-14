@@ -28,7 +28,7 @@ config =
 	'install_requires': ['nose'],
 	'packages': ['Ex46'],
 	'scripts': [],
-	'name': 'projectname'
+	'name': 'Ex46'
 }
 
 setup(**config)
