@@ -14,14 +14,20 @@
 
 import web
 
-urls = ('/', 'index')
+urls = (
+  '/', 'Index'
+)
 
 app = web.application(urls, globals())
 
-class index:
-	def GET(self):
-		greeting = "hello world"
-		return greeting
+# absolute path not the relative path
+render = web.template.render('/Users/user/bin/GitHub/LPHW/Ex50/gothonweb/templates/')
 
-if __name__ == '__main__':
+class Index(object):
+	def GET(self):
+		greeting = "Hello World"
+		return render.index(greeting = greeting)
+
+if __name__ == "__main__":
 	app.run()
+
