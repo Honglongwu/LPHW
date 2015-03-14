@@ -39,6 +39,8 @@ virtualenv – http://pypi.python.org/pypi/virtualenv
 5. Checking the problem with nosetests
 6. Coding now.
 
+*more and more practices make me stronger than before*
+
 Author: Honglong Wu    
 Email: BGI, wuhonglong@genomics.cn    
 History: Because all the problem was caused by the DNS
