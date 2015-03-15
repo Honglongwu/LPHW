@@ -15,7 +15,7 @@
 import web
 
 urls = (
-  '/', 'Index'
+  '/hello', 'Index'
 )
 
 app = web.application(urls, globals())
@@ -25,7 +25,8 @@ render = web.template.render('/Users/user/bin/GitHub/LPHW/Ex50/gothonweb/templat
 
 class Index(object):
 	def GET(self):
-		greeting = "Hello World"
+		form = web.input(name = "Nobody")
+		greeting = "Hello, %s" % form.name
 		return render.index(greeting = greeting)
 
 if __name__ == "__main__":
