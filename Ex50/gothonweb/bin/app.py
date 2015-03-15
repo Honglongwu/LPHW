@@ -25,12 +25,12 @@ render = web.template.render('/Users/user/bin/GitHub/LPHW/Ex50/gothonweb/templat
 
 class Index(object):
 	def GET(self):
+		return render.hello_form()
+	
+	def POST(self):
 		form = web.input(greeting=None, name = "Nobody")
-		if form.greeting:
-			greeting = "%s, %s" % (form.greeting, form.name)
-			return render.index(greeting = greeting)
-		else:
-			return "Error: greet is required."
+		greeting = "%s, %s" % (form.greeting, form.name)
+		return render.index(greeting = greeting)
 
 if __name__ == "__main__":
 	app.run()
