@@ -21,16 +21,16 @@ urls = (
 app = web.application(urls, globals())
 
 # absolute path not the relative path
-render = web.template.render('/Users/user/bin/GitHub/LPHW/Ex50/gothonweb/templates/')
+render = web.template.render('/Users/user/bin/GitHub/LPHW/Ex50/gothonweb/templates/', base = "layout")
 
 class Index(object):
 	def GET(self):
 		return render.hello_form()
 	
 	def POST(self):
-		form = web.input(greeting=None, name = "Nobody")
-		greeting = "%s, %s" % (form.greeting, form.name)
-		return render.index(greeting = greeting)
+		form = web.input(greet=None, name = "Nobody")
+		greet = "%s, %s" % (form.greet, form.name)
+		return render.index(greeting = greet)
 
 if __name__ == "__main__":
 	app.run()
