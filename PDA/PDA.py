@@ -43,5 +43,30 @@ print df.ix[10:20, 0:3] # or equal with df.ix[10:20, ['Abra', 'Apayao', 'Benguet
 print df.drop(df.columns[[1, 2]], axis = 1).head() # axis = 0 stands for rows, axis = 1 stands for columns
 
 # Summary information of Stat
- 
+## 1. Description
+print df.describe()
+
+## 2. Test, One perfect package of python that named as scipy contains more test functions, import stats module
+from scipy import stats as ss
+### Perform one sample t-test using 15000 as the true mean
+print ss.ttest_1sample(a = df.ix[:,"Abra"], popmean = 15000) # output the t value and two-tailed p value
+
+print ss.ttest_1sample(df, popmean = 15000) # apply this funtion to all columns
+
+# Visulization, you can use matplotlib, seaborn or bokeh packages
+import matplotlib.pyplot as plt
+plt.show(df.plot(kind="box"))
+
+import seaborn as sns
+plt.show(sns.boxplot(df, width=0.5, color="paste1"))
+
+plt.show(sns.violinplot(df, widths = 0.5, color = "pastel"))
+
+plt.show(sns.distplot(df.ix[:,2], rug = True, bins = 15))
+
+with sns.axes_style("white"):
+    plt.show(sns.jointplot(df.ix[:,1], df.ix[:,2], kind = "kde"))
+
+plt.show(sns.lmplot("Benguet", "Ifugao", df))
+
 
