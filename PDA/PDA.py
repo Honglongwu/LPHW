@@ -144,4 +144,16 @@ arr ** 0.5
 1 / arr
 
 
-###
+### Basic Indexing and Slicing
+arr = np.array(10)
+arr[5]
+arr[5:8]
+arr[5:8] = 12
+arr[::2]
+arr_slice = arr[5:8] # this not copy, just slicing a piece of data
+arr_slice = 12 # that you will find arr[5:8] = 12
+arr_slice = arr[5:8].copy()
+arr2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
+arr2d[0] # array([1,2,3]) row = axis 0; column = axis 1
+arr2d[0][1] # 2
+
