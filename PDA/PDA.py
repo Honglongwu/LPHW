@@ -69,4 +69,68 @@ with sns.axes_style("white"):
 
 plt.show(sns.lmplot("Benguet", "Ifugao", df))
 
+# Define Your Self-function
+def add_2int(x, y):
+	return x + y
+
+print add_2int(2, 2)
+
+def add_10(x):
+	return x + 10
+
+map(add_10, [1, 2, 3]) # or equal [add_10(i) for i in [1, 2, 3]]
+filter(lambda x: x > 5, [3, 4, 5, 6, 7]) # or equal [x for x in [3, 4, 5, 6, 7] if x > 5]
+
+# Create One Class
+## create one sub-class that inherit from object class
+class Human(object):
+	### property that belongs this class
+	species = "H. sapiens"
+	
+	### initial the class
+	def __init__(self, name):
+		### set value to the name
+		self.name = name
+
+	### example the class
+	def say(self, msg):
+		return "%s: %s" %(self.name, msg)
+
+	### methods belong to all example
+	@classmethod
+	def get_species(cls):
+		return cls.species
+
+	### static methods don't need example
+	@staticmethod
+	def grunt():
+		return "*grunt*"
+
+i = Human(name="Ian")
+print i.say("Hello")
+
+j = Human("Jeol")
+print j.say("hello")
+
+#### use the class function
+print i.get_species()
+
+#### modify the property of class
+Human.species = "H.neanderthalensis"
+print i.get_species()
+print j.get_species()
+
+Human.grunt()
+
+	
+import numpy as np
+#### create an array
+np.array([1,2,3])
+np.zeros(10)
+np.ones(10)
+np.eye((4,4))
+b = np.arange(15)
+b.shape
+b.ndim
+b.dtype
 
