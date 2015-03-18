@@ -11,4 +11,24 @@
 
 5. Data Visulaization
 6. Define self-function
+
+
+## The Basic knowledge on Numpy
+1. Basic info
+   import numpy as np
+   np.array([1, 2, 3])
+   np.arange(10)
+   np.empty()
+   np.zeros()
+   np.ones()
+   np.empty()
+   np.eye()
+
+2. Operations
+   arr = ([[1,2,3],[4,5,6]])
+   1 / arr
+   arr * arr
+   arr - arr
+   arr + arr
+   arr ** 2
  
