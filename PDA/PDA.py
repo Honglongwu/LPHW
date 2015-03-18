@@ -134,3 +134,14 @@ b.shape
 b.ndim
 b.dtype
 
+### Operations between arrays and scalars
+
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+arr * arr
+arr - arr
+arr + arr
+arr ** 0.5
+1 / arr
+
+
+###
