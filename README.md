@@ -41,7 +41,7 @@ virtualenv – http://pypi.python.org/pypi/virtualenv
 
 *more and more practices make me stronger than before*
 I End this Practice and Try to do more programming excercise
-
+I will stick on it, believe yourself.
 Author: Honglong Wu    
 Email: BGI, wuhonglong@genomics.cn    
 History: Because all the problem was caused by the DNS
