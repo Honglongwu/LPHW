@@ -10,6 +10,7 @@
 	one simple t-test
 
 5. Data Visulaization
+	python package and R ggplot will give us more beatiful figure
 6. Define self-function
 
 
