@@ -43,4 +43,11 @@
    // To set all the negative values in data to 0 we need only do:
    data[data < 0] = 0
    data[names != 'Joe'] == 7
-   
+4. Fancy Indexing
+   arr = np.empty((8,4))
+   arr[[4, 3, 0, 6]] 
+   arr[[-3, -5, -7]]
+   arr = np.arange(32).reshape((8, 4))
+   arr[[1, 5, 7, 2], [0, 3, 1, 2]]
+   arr[[1, 5, 7, 2], [:, 0, 3, 1, 2]] = arr[np.ix_([1, 5, 7, 2], [0, 3, 1, 2])]
+
