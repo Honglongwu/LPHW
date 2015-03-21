@@ -50,4 +50,10 @@
    arr = np.arange(32).reshape((8, 4))
    arr[[1, 5, 7, 2], [0, 3, 1, 2]]
    arr[[1, 5, 7, 2], [:, 0, 3, 1, 2]] = arr[np.ix_([1, 5, 7, 2], [0, 3, 1, 2])]
-
+5. Transposing Arrays and Swapping Axes
+   arr = np.arange(15).reshape((3, 5))
+   arr.T
+   inner matrix product X^TX with np.dot
+   arr = np.random.randn(6, 3)
+   np.dot(arrT, arr)
+   
