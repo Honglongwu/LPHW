@@ -32,4 +32,15 @@
    arr - arr
    arr + arr
    arr ** 2
- 
+3. Boolean Indexing
+   names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe']) 
+   data = randn(7,4)
+   data[names == 'Bob']
+   data[names == 'Bob',:3]
+   data[-(names == 'Bob')]
+   // the python keywords and or do not work with boolean arrays
+
+   // To set all the negative values in data to 0 we need only do:
+   data[data < 0] = 0
+   data[names != 'Joe'] == 7
+   
