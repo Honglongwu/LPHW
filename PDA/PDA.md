@@ -65,3 +65,15 @@
    arr = randn(4, 4)
    np.where(arr > 0, 2, -2)
    np.where(arr > 0, 2, arr)
+7. Methods for Boolean Arrays
+   arr = randn(100)
+   (arr > 0).sum # return the number of positive values
+   bools = np.array([False, False, True, False])
+   bools.any() # return True
+   bools.all() # return False
+8. Unique and Other Set Logic
+   names = np.array(['Bob', 'Joe', 'Will', 'Bob', 'Will', 'Joe', 'Joe'])
+   np.unique(names) # array(['Bob', 'Joe', 'Will'], dtype = '|S4')
+   values = np.array([6, 0, 0, 3, 2, 5, 6])
+   np.in1d(values, [2, 3, 6])
+   
