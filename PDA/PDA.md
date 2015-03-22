@@ -85,3 +85,6 @@
    mat = X.T.dot(X)
    inv(mat)
    mat.dot(inv(mat))
+10. Random Number Generation
+   samples = np.random.normal(size=(4,4))
+   
