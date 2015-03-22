@@ -76,4 +76,12 @@
    np.unique(names) # array(['Bob', 'Joe', 'Will'], dtype = '|S4')
    values = np.array([6, 0, 0, 3, 2, 5, 6])
    np.in1d(values, [2, 3, 6])
-   
+9. Linear Algebra
+   x = np.array([[1,2,3],[4,5,6]])
+   y = np.array([[6,23],[-1,7],[8,9]])
+   x.dot(y) # np.dot(x,y)
+   from numpy.linalg import inv, qr
+   X = numpy.random.randn(5,5) 
+   mat = X.T.dot(X)
+   inv(mat)
+   mat.dot(inv(mat))
