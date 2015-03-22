@@ -87,4 +87,15 @@
    mat.dot(inv(mat))
 10. Random Number Generation
    samples = np.random.normal(size=(4,4))
+11. Reshaping Arrays
+   arr = np.arange(8)
+   arr.reshape((4,2))
+   arr.reshape((4,2)).reshape((2,4))
+   arr1 = np.array([[1,2,3],[4,5,6]])
+   arr2 = np.array([[7,8,9],[10,11,12]])
+   np.concatenate([arr1, arr2], axis=0) by rows
+   np.concatenate([arr1, arr2], axis=0) by columns
+   np.vstack((arr1, arr2))
+   np.hstack((arr1, arr2))
+
    
