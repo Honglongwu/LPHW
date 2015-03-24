@@ -97,4 +97,19 @@
    np.concatenate([arr1, arr2], axis=0) by columns
    np.vstack((arr1, arr2))
    np.hstack((arr1, arr2))
-12. Pandas 
+12. Pandas Series
+   import pandas as pd
+   from pandas import Series, Dataframe
+   obj = Series([4, 7, -5, 3])
+   obj.values # array([4,7,-5,3])
+   obj.index # Int64Index([0,1,2,3])
+   obj2 = Series([4,7,-5,3], index=['d','b','a','c'])
+   obj2['a'] # -5
+   obj2['d'] = 6
+   obj2[obj2 > 0]
+   obj2 * 2
+   np.exp(obj2)
+13. Series as Dict
+   'b' in obj2 # True
+   'e' in obj2 # False
+
