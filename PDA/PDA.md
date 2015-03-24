@@ -112,4 +112,12 @@
 13. Series as Dict
    'b' in obj2 # True
    'e' in obj2 # False
-
+14. From Dict to Series
+   sdata = {'Ohio': 35000, 'Texas': 71000, 'Oregon':16000, 'Utah': 5000}
+   obj3 = Series(sdata)
+   states = ['California', 'Ohio', 'Oregon', 'Texas']
+   obj4 = Series(sdata, index=states)
+   pd.isnull(obj4) or obj4.isnull()
+   pd.notnull(obj4)
+   obj3 + obj4 # automatically aligns differently-indexed data
+   Both the series object itself and its index have a name attribute
