@@ -97,5 +97,4 @@
    np.concatenate([arr1, arr2], axis=0) by columns
    np.vstack((arr1, arr2))
    np.hstack((arr1, arr2))
-
-   
+12. Pandas 
