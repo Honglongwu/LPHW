@@ -133,4 +133,6 @@
 16. Index Objects
    index = obj.index
    index[1:]
+17. reindex
+   obj.reindex()
    
