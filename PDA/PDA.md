@@ -121,3 +121,12 @@
    pd.notnull(obj4)
    obj3 + obj4 # automatically aligns differently-indexed data
    Both the series object itself and its index have a name attribute
+15. Dataframe
+   data = {'state':[],'year':, 'pop':[]}
+   frame = dataframe(data)
+   frame.year
+   frame['state']
+   # retrieve rows
+   frame.ix['three']
+   del frame['state']
+   frame.values # will return the data contained in the dataframe
