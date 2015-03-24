@@ -130,3 +130,7 @@
    frame.ix['three']
    del frame['state']
    frame.values # will return the data contained in the dataframe
+16. Index Objects
+   index = obj.index
+   index[1:]
+   
