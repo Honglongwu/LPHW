@@ -135,4 +135,4 @@
    index[1:]
 17. reindex
    obj.reindex()
-   
+18. 
