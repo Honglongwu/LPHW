@@ -168,4 +168,9 @@
    frame.sort_index(by=['b','a'])
    Series.rank(method="first")
    frame.rank(axis=1) # row
-  
+22. Summarizing and Computing Descriptive Statistics
+   df.sum()
+   df.sum(axis=1) 
+   df.mean(axis = 1, skipna = False)
+   df.idxmin() # return indirect statistics like the index value where the minimum or maximum values are attained
+   
