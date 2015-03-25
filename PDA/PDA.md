@@ -158,3 +158,14 @@
    format = lambda x:'%.2f' % x
    frame.applymap(format)
    Series.map(format)
+21. Sorting and Ranking
+   frame.sort_index() # row index
+   frame.sort_index(axis = 1) # column index
+   frame.sort_index(axis = 1, ascending = False)
+   obj = Series()
+   obj.order() # any missing value are sorted to the end of the series object
+   frame.sort_index(by='b')
+   frame.sort_index(by=['b','a'])
+   Series.rank(method="first")
+   frame.rank(axis=1) # row
+  
