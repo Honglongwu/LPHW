@@ -145,3 +145,16 @@
    obj1.add(obj2, fill_value = 0)
    obj1.reindex(columns = df2.columns, fill_value = 0)
    frame.sub(series, axis=0) # 0 row-index 
+20. Function application and mapping
+   Numpy ufuncs work fine with pandas object
+   frame = Dataframe()
+   frame.abs()
+   f = lambda x: x.max() - x.min()
+   frame.apply(f, axis=0) # column
+   frame.apply(f, axis=1) # rows
+   def f(x):
+	return Series([x.min(), x.max()], index=['min','max'])
+   frame.apply(f)
+   format = lambda x:'%.2f' % x
+   frame.applymap(format)
+   Series.map(format)
