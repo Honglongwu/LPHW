@@ -135,4 +135,9 @@
    index[1:]
 17. reindex
    obj.reindex()
-18. 
+18. select row or column from dataframe
+   obj[val] # select single column
+   obj.ix[val] # select single row
+   obj.ix[:, val] # select signle column of sunset of dataframe
+   obj.ix[val1, val2] # select both row and column
+    
