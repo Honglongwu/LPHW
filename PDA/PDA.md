@@ -140,4 +140,8 @@
    obj.ix[val] # select single row
    obj.ix[:, val] # select signle column of sunset of dataframe
    obj.ix[val1, val2] # select both row and column
-    
+19. arithmetic methods with fill values
+   obj1 + obj2
+   obj1.add(obj2, fill_value = 0)
+   obj1.reindex(columns = df2.columns, fill_value = 0)
+   frame.sub(series, axis=0) # 0 row-index 
