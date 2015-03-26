@@ -185,3 +185,13 @@
    pd.concat([s1,s2,s3]) # as rbind() function of R
    pd.concat([s1,s2,s3], axis=1) # dataframe
    df1.combine_first(df2)
+25. Removing Duplicates
+   data.duplicated()
+   data.drop_duplicates()
+   data.replace(target, value)
+   pd.cut(list, bins)
+   pd.value_count(pd.cut())
+25. permutation and random sampling
+   np.random.permutation()
+   df.take()
+    
