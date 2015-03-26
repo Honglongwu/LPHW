@@ -173,4 +173,7 @@
    df.sum(axis=1) 
    df.mean(axis = 1, skipna = False)
    df.idxmin() # return indirect statistics like the index value where the minimum or maximum values are attained
-   
+23. Data handle
+   pd.read_csv
+   pd.read_table
+   data.to_csv 
