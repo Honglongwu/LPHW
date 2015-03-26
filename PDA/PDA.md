@@ -177,3 +177,11 @@
    pd.read_csv
    pd.read_table
    data.to_csv 
+24. Data Wrangling: clean, transform, merge, reshape
+   pd.merge(df1, df2, on="key1", how="outer")
+   pd.merge(left1, right1, left_on="key", right_index=True)
+   pd.merge(left2, right2, how="outer", left_index=True, right_index=True)
+   np.concatenate([arr, arr], axis=1) # column paste, as cbind() function of R
+   pd.concat([s1,s2,s3]) # as rbind() function of R
+   pd.concat([s1,s2,s3], axis=1) # dataframe
+   df1.combine_first(df2)
