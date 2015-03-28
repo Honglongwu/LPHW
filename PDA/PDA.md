@@ -194,4 +194,4 @@
 25. permutation and random sampling
    np.random.permutation()
    df.take()
-    
+26. pivot_table 
