@@ -156,4 +156,24 @@ arr_slice = arr[5:8].copy()
 arr2d = np.array([[1,2,3],[4,5,6],[7,8,9]])
 arr2d[0] # array([1,2,3]) row = axis 0; column = axis 1
 arr2d[0][1] # 2
-### Pandas pivot_table
+### matplotlib 
+from matplotlib.pyplot as plt
+from datetime import datetime
+
+fig = plt.figure()
+ax = fig.add_subplot(1,1,1)
+
+data = pd.read_csv('ch08/spx.csv', index_col=0, parse_dates=True)
+spx = data['SPX']
+
+spx.plot(ax=ax, style='k--')
+
+crisis_data = [(datetime(2007,10,11),'Peak of bull market'),(datetime(2008, 3, 12), 'Bear Stearns Fails'),(datetime(2008, 9, 15), 'Lehman Bankruptcy')]
+
+for date, label in crisis_data:
+	ax.annotation(label, xy=(date,spx.asof(date) + 50), xytext=(date, spx.asof(date) + 200),arrowprops=dict(facecolor='black'), horizontalalignments='left', verticalalignment='top')
+
+ax.set_xlim(['1/1/2007', '1/1/2011'])
+ax.set_ylim([600, 1800])
+
+ax.set_title('Important dates in 2008-2009 financial crisis')
