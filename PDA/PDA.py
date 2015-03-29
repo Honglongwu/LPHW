@@ -184,3 +184,22 @@ s.plot() # you can use use_index=False to disabled
 
 df = DataFrame(np.random.rand(10,4).cumsum(0),columns=['A','B','C','D'],index=np.arange(0,100,10))
 df.plot()
+
+### pandas pivot_table
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('*.xlsx')
+df.head()
+
+df['status'] = df['status'].astype('categroy')
+df['status'].cat.set_categories(["won","pending","presented","declined"],inplace=True)
+pd.pivot_table(df,index=["name"])
+pd.pivot_table(df,index=["name","Rep","Manager"])
+pd.pivot_table(df, index=["Rep","Manager"], values=["Price"])
+pd.pivot_table(df, index=["Rep","Manager"], values=["Price"],aggfun=np.sum)
+pd.pivot_table(df, index=["Rep","Manager"], values=["Price"],aggfun=[np.mean, len])
+pd.pivot_table(df, index=["Rep","Manager"], values=["Price"],columns=["Product"],aggfun=[np.sum], fill_value = 0)
+pd.pivot_table(df, index=["Rep","Manager"], values=["Price","Quantity"],columns=["Product"],aggfun=[np.sum], fill_value = 0)
+pd.pivot_table(df, index=["Rep","Manager","Product"], values=["Price","Quantity"],aggfun=[np.sum,np.mean], fill_value = 0, margins=True)
+
