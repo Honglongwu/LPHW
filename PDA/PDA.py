@@ -177,3 +177,10 @@ ax.set_xlim(['1/1/2007', '1/1/2011'])
 ax.set_ylim([600, 1800])
 
 ax.set_title('Important dates in 2008-2009 financial crisis')
+
+### Series and Dataframe plot
+s = Series(np.random.randn(10).cumsum(), index=np.arange(0,100,10))
+s.plot() # you can use use_index=False to disabled
+
+df = DataFrame(np.random.rand(10,4).cumsum(0),columns=['A','B','C','D'],index=np.arange(0,100,10))
+df.plot()
