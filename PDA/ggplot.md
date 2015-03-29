@@ -41,4 +41,4 @@ I will extend reshape2 and plyr package in the following days
 	geom_point(aes(x = hp, y = mpg), data = mtcars, color = "red") + 
   	geom_point(aes(x = mtcars$hp, y = mtcars$disp), color = "green")+ 
   	geom_point(aes(x = hp, y= mpg), data = mtcars.c, color = "blue")
- 
+3. ggplot3. ggplot3. ggplot 
