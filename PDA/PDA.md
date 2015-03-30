@@ -199,4 +199,11 @@
    df['data1'].groupby(df['key1']).mean()
    df.groupby(['key1','key2']).mean()
    df.groupby('key1').mean() # this code will discard the key2 column that is not numeric
-27. 
+27. Iterating Over Groups
+   for name, group in grouped:
+        print name
+        print group
+   grouped = df.groupby(df.dtypes, axis = 1)
+28. Selecting a column or subset of columns
+   df.groupby('key1')['data1']
+   df.groupby(['key1','key2'])[['data2']] .mean()
