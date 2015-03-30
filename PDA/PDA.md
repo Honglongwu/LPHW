@@ -194,4 +194,9 @@
 25. permutation and random sampling
    np.random.permutation()
    df.take()
-26. pivot_table 
+26. GroupBy Mechanics
+   df = DataFrame({'key1':[], 'key2':[], 'data1':[], 'data2':[]})
+   df['data1'].groupby(df['key1']).mean()
+   df.groupby(['key1','key2']).mean()
+   df.groupby('key1').mean() # this code will discard the key2 column that is not numeric
+27. 
