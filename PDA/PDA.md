@@ -207,3 +207,5 @@
 28. Selecting a column or subset of columns
    df.groupby('key1')['data1']
    df.groupby(['key1','key2'])[['data2']] .mean()
+29. Grouping with functions
+   people.groupby(len).sum()
