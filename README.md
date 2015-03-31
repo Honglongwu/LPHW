@@ -44,6 +44,7 @@ I End this Practice and Try to do more programming excercise
 I will stick on it, believe yourself.
 Finish the part one of ggplot
 Getting started with pandas
+Running for next step
 Author: Honglong Wu    
 Email: BGI, wuhonglong@genomics.cn    
 History: Because all the problem was caused by the DNS
