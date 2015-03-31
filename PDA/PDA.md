@@ -212,3 +212,8 @@
 30. Group-wise Operations and Transformations
    k1_means = df.groupby('key1').mean().add_prefix('mean_')
    pd.merge(df, k1_means, left_on = 'key1', right_index=True)
+31. Filling missing values
+   s = Series(np.random.randn(6))
+   s[::2] = np.nan
+   s.fillna(s.mean())
+
