@@ -216,4 +216,10 @@
    s = Series(np.random.randn(6))
    s[::2] = np.nan
    s.fillna(s.mean())
-
+32. Time Series
+   from datetime import datetime
+   now = datetime.now()
+   datetime.strptime(value,'%Y-%m-%d')
+   from dateutil.parser import parse
+   parse('Jan 31, 1997 10:45 PM')
+   
