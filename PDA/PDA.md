@@ -209,3 +209,6 @@
    df.groupby(['key1','key2'])[['data2']] .mean()
 29. Grouping with functions
    people.groupby(len).sum()
+30. Group-wise Operations and Transformations
+   k1_means = df.groupby('key1').mean().add_prefix('mean_')
+   pd.merge(df, k1_means, left_on = 'key1', right_index=True)
