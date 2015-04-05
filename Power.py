@@ -19,3 +19,5 @@ def Power(x, n):
 	
 num = int(raw_input('which number do you want? '))
 print Power(2, num)
+print Power(3, num)
+
