@@ -33,4 +33,19 @@ loading data from excel file:
 loading data from txt file:
 	df = pd.read_csv("E:/Text.txt", sep="\t")
 
+# Part 2: How to convert variables to different type
+Converting a variable data type to other is import and common procedure we perform after loading data.
 
+Convert numeric variables to string variables and vice versa 
+	string_outcome = str(numeric_input) 
+	integer_outcome = int(string_input)
+	float_outcome = float(string_input)
+the later operations are especially useful when you input value from user using raw_input(), by default, the values are read at string.
+
+Convert character date to Date:
+there are multiple ways to do this. the simplest would be to use datetime library and strptime function.
+	from datetime import datetime
+	char_date = 'Apr 1 2015 1:20 PM'
+	date_obj = datetime.strptime(char_date, "%b %d %Y %I:%M%p")
+	print date_obj
+	
