@@ -132,4 +132,7 @@ often, we encounter duplicate observations. To tackle this in python, we can use
 
 
 
-
+# part 9: How to group variables in python to calculate count, average, sum
+To understand the count, average and sum of variable, I would suggest you to use dataframe.describe() with groupby().
+	test = df.groupby(['Gender'])
+	test.describe()
