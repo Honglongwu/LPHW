@@ -56,4 +56,9 @@ there are multiple ways to do this. the simplest would be to use datetime librar
 	result = df.pivot(index = "ID", columns = "Product", values = "Sales")
 	print result
 
+# part 4: How to sort DataFrame
+Sorting of data can be done using dataframe.sort(). It can be based on multiple variables and ascending or descending both order.
+	df = pd.read_excel("E:/transpose.xlsx","Sheet1")
+	print df.sort(['Product', 'Sales'], ascending = [True, False])
+
 
