@@ -111,7 +111,19 @@ Frequency Tables can be used to understand the distribution of a categorical var
 	test = df.groupby(['Gender','BMI'])
 	test.size()
 
-
+# part 7: How to do sample data set in python
+To select sample of a data set, we will use library numpy and random. Sampling of dataset always helps to understand data quickly, let us say, from EMP table, I want to select random sample of 5 employee.
+	import numpy as np
+	import pandas as pd
+	from random import sample
+	
+	# create random index
+	rindex = np.array(sample(xrange(len(df)),5))
+	
+	# get 5 random rows from df
+	dfr = df.ix[rindex]
+	print dfr
+	
 
 
 
