@@ -136,3 +136,13 @@ often, we encounter duplicate observations. To tackle this in python, we can use
 To understand the count, average and sum of variable, I would suggest you to use dataframe.describe() with groupby().
 	test = df.groupby(['Gender'])
 	test.describe()
+
+# part 10: How to recognize and treat missing values and outliers
+To identify missing values, we can use dataframe.isnull()
+	df.isnull()
+	
+	# Example to impute missing values in Age by the mean
+	import numpy as np
+	meanAge = np.mean(df.Age)
+	df.Age = df.Age.fillna(meanAge)
+	
