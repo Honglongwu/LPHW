@@ -102,6 +102,15 @@ Data visulization always helps us to understand the data easily. Python has libr
 	sns.boxplot(df['Age'])
 	sns.despine()
 	
+# part 6: How to generate frequency tables with pandas
+Frequency Tables can be used to understand the distribution of a categorical variable or n categorical variables using frequency tables
+	import pandas as pd
+	df = pd.read_excel("E:/First.xlsx","Sheet1")
+	print df
+	
+	test = df.groupby(['Gender','BMI'])
+	test.size()
+
 
 
 
