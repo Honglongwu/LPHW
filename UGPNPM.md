@@ -49,3 +49,11 @@ there are multiple ways to do this. the simplest would be to use datetime librar
 	date_obj = datetime.strptime(char_date, "%b %d %Y %I:%M%p")
 	print date_obj
 	
+# part 3: How to transpose a Data set
+	long to wide
+	df = pd.read_excel("E:/transpose.xlsx", "Sheet1")
+	print df
+	result = df.pivot(index = "ID", columns = "Product", values = "Sales")
+	print result
+
+
