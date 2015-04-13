@@ -61,4 +61,51 @@ Sorting of data can be done using dataframe.sort(). It can be based on multiple 
 	df = pd.read_excel("E:/transpose.xlsx","Sheet1")
 	print df.sort(['Product', 'Sales'], ascending = [True, False])
 
+# part 5: How to create plots(Histogram, scatter, boxplot)
+Data visulization always helps us to understand the data easily. Python has library like matplotlib and seaborn to create multiple graphs effectively. Let us look at some of visulization to understand below behavior of variable:
+1. the distribution of age 
+2. relation between age and sales
+3. if sales are normally distribution or not
+	#### Histogram
+	import matplotlib.pyplot as plt
+	import pandas as pd
+	df = pd.read_excel("E:/First.xlsx","Sheet1")
+	
+	# Plots in matplotlib reside within a figure object, use plt.figure to create new figure
+	fig = plt.figure()
+
+	# Create one or more subplots using add_subplot, because you can not create blank figure
+	ax = fig.add_subplot(1,1,1)
+	
+	# variable
+	ax.hist(df['Age'],bins=5)
+	
+	# Labels and Title
+	plt.title('Age distribution')
+	plt.xlabel('Age')
+	plt.ylabel('#Employee')
+	plt.show()
+	
+	#### Scatter
+	fig = plt.figure()
+	ax.scatter(df['Age'], df['Sales'])
+	
+	# labels and titles
+	plt.title('Sales and Age distribution')
+	plt.xlabel('Age')
+	plt.ylabel('Sales')
+	plt.show()
+	
+	#### boxplot
+	import seaborn as sns
+	
+	sns.boxplot(df['Age'])
+	sns.despine()
+	
+
+
+
+
+
+
 
