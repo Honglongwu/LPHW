@@ -124,7 +124,10 @@ To select sample of a data set, we will use library numpy and random. Sampling o
 	dfr = df.ix[rindex]
 	print dfr
 	
-
+# part 8: How to remove duplicate values of variable
+often, we encounter duplicate observations. To tackle this in python, we can use dataframe.drop_duplicates()
+	rem_dup = df.drop_duplicates(['Gender', 'BMI'])
+	print rem_dup
 
 
 
