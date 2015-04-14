@@ -211,4 +211,46 @@ list_of_acids = ['','']
 df = olive_oil[list_of_acids].apply(lambda x:x/100)
 
 # shape and columns
+olive_oil.shape
+pd.DataFrame(olive_oil.columns)
+
+# unique function
+olive_oil.region.unique()
+
+# cross tab
+pd.crosstab(olive_oil.area, olive_oil.region)
+
+# accessing sub data frames
+olive_oil[['','']]
+olive_oil.area or olive_oil['area']
+
+# plotting
+plt.hist(olive_oil.palamtic)
+
+fig, axes = plt.subplots(figsize = (10, 10), nrows = 2, ncols = 2)
+
+
+# groupby and statistics
+region_groupby = olive_oil.groupby('region')
+grp_reg = region_groupby.describe()
+
+olive_oil.groupby('region').std()
+
+# aggregate function
+region_groupby.aggregate(np.mean)
+
+# join 
+list_of_acid = []
+renamedict_std = {k:k+'_std' for k in list_of_acid}
+olstd_rename(columns = renamedict_std, inplace = True)
+olmean = olmean[['pal']]
+olstd = olstd[['pal']]
+newol = olmean.join(olstd)
+
+# masking 
+ecio = (olive_oil.ecio < 0.05)
+
+# handling missing values
+data.dropna()
+
 
