@@ -146,3 +146,6 @@ To identify missing values, we can use dataframe.isnull()
 	meanAge = np.mean(df.Age)
 	df.Age = df.Age.fillna(meanAge)
 	
+# part 11: How to join/merge data sets
+Joining/merging is one of the common operation required to integrate datasets from different sources. They can be handled effectively in pandas using merge
+df_new = pd.merge(df1, df2, how = 'inner', left_index = True, right_index = True)
