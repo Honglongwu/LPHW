@@ -149,3 +149,27 @@ To identify missing values, we can use dataframe.isnull()
 # part 11: How to join/merge data sets
 Joining/merging is one of the common operation required to integrate datasets from different sources. They can be handled effectively in pandas using merge
 df_new = pd.merge(df1, df2, how = 'inner', left_index = True, right_index = True)
+
+# Another Manual
+Here are some features of the library
+1. A fast and efficient DataFrame object for data manipulation with integrated indexing
+2. Tools for reading and writing data between in-memory data structures and different formats: csv, txt, excel, SQL database and HDF5
+3. Flexible reshaping and pivoting of datasets
+4. Intelligent label-based slicing, fancy indexing, and subsetting of large data sets
+5. Columns can be inserted and deleted from data structures for size mutability
+6. Time series-functionality: date range generation and frequency conversion
+7. Aggregating or transforming data with a powerful group by engine allowing split-apply-combine operations on data sets
+
+firstly, we should import the standard pandas libraries
+	import pandas as pd
+next we can read the data from csv file using read_csv function in pandas, and to view the summary head function will be useful
+	insurance_rates = pd.read_csv("US_Homeinsurance_Rates.csv", delimiter = ",")
+	insurance_rates.head()
+syntax of sort:
+	DataFrame.sort(columns=None, axis = 0, ascending = True, inplace = False, kind = 'quicksort', na_position = 'last')
+	result.describe()
+	result.mean()
+	result.median()
+we can easily add new columns to data frame. just say DataFrame['column_name'] = Value
+	result['Percentage Change'] = (result['2013'] - result['2003']) * 100 / result['2003']
+	
