@@ -191,4 +191,24 @@ table.query('Manager == ["Debra"]')
 # 14 Best Python Pandas Features
 Pandas is the most widely used tools for data munging. it contains high-level data structures and manipulation tools designed to make data analysis fast and easy.
 
+# Loading the data
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+olive_oil = pd.read_csv("file.csv")
+olive_oil.head()
+
+# Rename Function
+olive_oil.rename(columns = {olive_oil.columns[0]:'area_Idili'}, inplace = True)
+olive_oil.head()
+
+# map
+olive_oil.area_Idili = olive_oil.area_Idili.map(lambda x : x.split('.')[-1])
+
+# apply and apply map
+list_of_acids = ['','']
+df = olive_oil[list_of_acids].apply(lambda x:x/100)
+
+# shape and columns
 
