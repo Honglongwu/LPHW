@@ -172,4 +172,23 @@ syntax of sort:
 	result.median()
 we can easily add new columns to data frame. just say DataFrame['column_name'] = Value
 	result['Percentage Change'] = (result['2013'] - result['2003']) * 100 / result['2003']
-	
+
+# pivot table
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv()
+df['status'] = df['status'].astype("category")	
+df['status'].cat.set_categories(['won','pending','present'], inplace = True)
+
+pd.pivot_table(df, index = 'Name')
+pd.pivot_table(df, index = ['Name', 'Rep', 'Manager'])
+pd.pivot_table(df, index = ['Manager', 'Rep'], values = ['Prices'], aggfunc = [np.sum, len])
+pd.pivot_table(df, index = ['Manager', 'Rep'], values = ['Prices'], columns = ['product'],aggfunc = [np.sum, len], fill_value = 0, margins = True)
+
+table.query('Manager == ["Debra"]')
+
+# 14 Best Python Pandas Features
+Pandas is the most widely used tools for data munging. it contains high-level data structures and manipulation tools designed to make data analysis fast and easy.
+
+
