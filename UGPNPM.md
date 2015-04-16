@@ -253,4 +253,21 @@ ecio = (olive_oil.ecio < 0.05)
 # handling missing values
 data.dropna()
 
+# Ten Mins to pandas
+1. Creating a Series by passing a list of values, letting pandas create a default integer index
+s = pd.Series([1, 3, 5, np.nan, 6, 8])
+
+2. Creating a DataFrame by passing a numpy array, with a datetime index and labeled columns
+dates = pd.date_range('20130101', periods = 6)
+df = pd.DataFrame(np.random.randn(6, 4), index = dates, columns = list('ABCD'))
+
+3. Creating a DataFrame by parsing a dict of objects that can be converted to series-like
+df2 = pd.DataFrame({'A':1., 'B':pd.Timestamp('20130101'), 'C':pd.Series(1, index = list(range(4), dtype='float32')), 'D':np.array([3]*4, dtype = 'int32'), 'E':pd.Categorical(['test','train','test','train']),'F':'foo'})
+
+4. Transposing your data
+df.T
+
+5. Sorting by an axis
+df.sort_index(axis=1, ascending=False)
+df.sort(columns='B')
 
