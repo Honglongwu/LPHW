@@ -271,3 +271,6 @@ df.T
 df.sort_index(axis=1, ascending=False)
 df.sort(columns='B')
 
+df2 = df.copy()
+df2['E'] = ['one', 'one', 'two', 'three', 'four', 'three']
+df2[df2.E.isin(['one', 'two'])]
