@@ -274,3 +274,8 @@ df.sort(columns='B')
 df2 = df.copy()
 df2['E'] = ['one', 'one', 'two', 'three', 'four', 'three']
 df2[df2.E.isin(['one', 'two'])]
+
+6. histogram
+s = pd.Series(np.random.randint(0, 7, size = 10))
+s.value_counts()
+
